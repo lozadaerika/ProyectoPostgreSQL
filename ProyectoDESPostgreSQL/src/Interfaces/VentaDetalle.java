@@ -24,13 +24,13 @@ import javax.swing.table.DefaultTableModel;
 /**
  * @author Erika
  */
-public class Venta extends javax.swing.JFrame {
+public class VentaDetalle extends javax.swing.JFrame {
 DefaultTableModel modelo;
 int clicks=0;
   static int finalizado=0;
   static int ventaIniciada=0;
     /** Creates new form VentasTodas */
-    public Venta() {
+    public VentaDetalle() {
         initComponents();
         txtCodigo.requestFocus();
         getContentPane().setBackground(Color.white);
@@ -507,7 +507,7 @@ int clicks=0;
          jbtAnular.setEnabled(false);
      }
 
-    public Venta(GraphicsConfiguration gc) {
+    public VentaDetalle(GraphicsConfiguration gc) {
         super(gc);
     }
      public void cancelar(){
@@ -779,10 +779,10 @@ public void mouse( java.awt.event.MouseEvent evt){
             }
         });
         jcbEmpleado.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
-            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
-            }
             public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
                 jcbEmpleadoPopupMenuWillBecomeInvisible(evt);
+            }
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
             }
             public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
             }
@@ -1297,13 +1297,13 @@ if(evt.getClickCount()==2){
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Venta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentaDetalle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Venta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentaDetalle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Venta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentaDetalle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Venta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentaDetalle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -1311,7 +1311,7 @@ if(evt.getClickCount()==2){
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                new Venta().setVisible(true);
+                new VentaDetalle().setVisible(true);
             }
         });
     }
